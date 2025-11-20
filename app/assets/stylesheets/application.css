@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+body {
+  background-image: image-url("background_theme.png");
+  background-repeat: no-repeat;
+  background-size: cover; /* 画面いっぱいに広げる */
+  background-position: top center;
+  background-attachment: fixed; /* スクロールしても固定 */
+}
+
+/* 白背景で文字が読みにくくならないよう補助 */
+.tweets-container,
+h1,
+h3 {
+  background-color: rgba(255, 255, 255, 0.8); 
+  padding: 10px;
+  border-radius: 8px;
+}
