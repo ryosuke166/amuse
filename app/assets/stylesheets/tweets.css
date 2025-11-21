@@ -42,3 +42,109 @@ a {
 .link:hover, .action-link:hover {
   background-color: #c49d5a;
 }
+
+
+
+/* 追加部分 */
+body {
+  font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+  background: linear-gradient(#f1d4a9, #e6c89f, #d8b98d);
+  color: #4b3a24;
+}
+
+/* タイトル部分 */
+h1, h3 {
+  text-align: center;
+  margin: 20px auto;
+  width: 90%;
+  padding: 12px;
+  background: #fbf3e4;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+}
+
+h1 {
+  font-size: 28px;
+}
+h3 {
+  font-size: 22px;
+}
+
+/* フォーム全体を囲むエリア */
+form {
+  width: 70%;
+  margin: 20px auto 40px;
+  padding: 25px 30px;
+  background: rgba(255,255,255,0.75);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* 各入力フォーム */
+.field {
+  margin-bottom: 25px;
+}
+
+.field label {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #4b3a24;
+}
+
+.field input[type="text"],
+.field input[type="file"] {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #bfa17a;
+  background: rgba(255,255,255,0.9);
+  font-size: 16px;
+  box-shadow: inset 0 1px 4px rgba(0,0,0,0.08);
+}
+
+/* 投稿ボタン */
+input[type="submit"] {
+  display: block;
+  width: 40%;
+  margin: 25px auto 0;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  background: #d2a974;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+input[type="submit"]:hover {
+  background: #c1905e;
+}
+
+/* 戻るリンク */
+.back-link {
+  display: block;
+  width: fit-content;
+  margin: 10px auto 40px;
+  padding: 10px 20px;
+  background: #b99363;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.back-link:hover {
+  background: #a98252;
+}
+
+
+
+
+
+
+/* indexのほう*/

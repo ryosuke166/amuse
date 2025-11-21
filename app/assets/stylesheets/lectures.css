@@ -65,3 +65,229 @@
     color: #ccc;
     
   }
+  /*　ここまでが☆評価基礎情報　*/
+
+  /* --- 全体背景 --- */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(#e6c995 0%, #f7dfb9 40%, #e6c995 100%);
+  position: relative;
+  font-family: "Yu Gothic", "Hiragino Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+/* --- 下部にシルエット（建物 + 遊園地） --- */
+body::before {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+
+  /* 抽象的な建物ライン */
+  background:
+    linear-gradient(to top, #d2b48c 0%, #d2b48c 70%, transparent 70%);
+  z-index: -2;
+}
+
+/* --- CSSだけで作るジェットコースター曲線 --- */
+body::after {
+  content: "";
+  position: fixed;
+  bottom: 40px;
+  left: -10%;
+  width: 120%;
+  height: 200px;
+
+  /* コースターのレール部分（波線） */
+  background:
+    radial-gradient(circle at 10% 80%, #c6a978 14px, transparent 15px),
+    radial-gradient(circle at 25% 45%, #c6a978 12px, transparent 13px),
+    radial-gradient(circle at 45% 75%, #c6a978 16px, transparent 17px),
+    radial-gradient(circle at 70% 50%, #c6a978 12px, transparent 13px),
+    radial-gradient(circle at 90% 85%, #c6a978 15px, transparent 16px);
+
+  background-repeat: no-repeat;
+  background-size: 100% 200px;
+
+  z-index: -1;
+  opacity: 0.9;
+}
+
+/* --- コースターの支柱（連続縦線） --- */
+.coaster-supports {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(153, 119, 72, 0.7) 0px,
+    rgba(153, 119, 72, 0.7) 5px,
+    transparent 5px,
+    transparent 35px
+  );
+
+  z-index: -1;
+}
+
+
+
+
+
+
+/* ---- フォーム全体を中央に配置 ---- */
+.lecture_form {
+  width: 450px;
+  margin: 50px auto;
+  padding: 25px;
+  background: rgba(255, 248, 230, 0.92); /* 遊園地っぽいベージュ */
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+  border: 4px solid #d8bf96;
+  text-align: center;
+}
+
+/* 見出し */
+.lecture_form h3 {
+  margin-top: 0;
+  font-size: 26px;
+  color: #5b3a1e;
+  text-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+
+/* サブ見出し（評価項目） */
+.lecture_form h5 {
+  margin: 20px 0 10px 0;
+  font-size: 18px;
+  color: #5b3a1e;
+  text-shadow: 0 0 2px rgba(0,0,0,0.2);
+}
+
+/* テキストフィールド */
+.name_field {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 2px solid #d6b98c;
+  font-size: 15px;
+  outline: none;
+}
+
+.name_field:focus {
+  border-color: #b38b5c;
+  box-shadow: 0 0 5px #b38b5c;
+}
+
+/* ---- 星ラジオボタン部分 ---- */
+.post_form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.post_form input[type="radio"] {
+  display: none;
+}
+
+/* 星の見た目 */
+.post_form label {
+  cursor: pointer;
+  font-size: 25px;
+  color: #c7b09d; /* 未選択：薄い星 */
+  transition: 0.2s ease-in-out;
+}
+
+.post_form label:hover {
+  transform: scale(1.2);
+}
+
+/* ラベル内の補助テキスト */
+.post_form label .text {
+  display: block;
+  font-size: 10px;
+  color: #5b3a1e;
+  margin-bottom: -6px;
+}
+
+/* クリックした時の星の色 */
+.post_form input[type="radio"]:checked + label {
+  color: #ffcc00; /* ゴールド */
+  text-shadow: 0 0 8px rgba(255, 204, 0, 0.8);
+}
+
+/* ---- 送信ボタン ---- */
+input[type="submit"] {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background: #e6c37b;
+  color: #5b3a1e;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+input[type="submit"]:hover {
+  background: #f5d393;
+  transform: translateY(-2px);
+}
+
+
+
+
+
+
+
+
+/* ---- 共通ボタンスタイル ---- */
+.theme-button {
+  display: inline-block;
+  display: block;
+  padding: 12px 28px;
+  margin: 20px auto;
+  background: #f3c97c;                /* 遊園地カラー（明るいベージュ） */
+  color: #5b3a1e;                     /* 茶色で読みやすい */
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  border: 3px solid #e5b86b;
+  transition: 0.2s ease-in-out;
+  text-align: center;
+}
+
+.theme-button:hover {
+  background: #ffd892;               /* ふわっと明るく */
+  transform: translateY(-3px);       /* 少し浮く */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.35);
+}
+/* ----ｔボタンスタイル ---- */
+.close-button {
+    display: inline-block;
+    font-size: 15px;        /* 大きく */
+    font-weight: 400;       /* 太くして存在感アップ */
+    background: #000000;    /* 黒 */
+    color: #ffffff;         /* 白文字 */
+    padding: 7px 15px;     /* ボタンサイズ */
+    border-radius: 50px;    /* 丸み */
+    text-decoration: none;
+    box-shadow: 0 4px 0 #444444; /* 立体感の影 */
+    transition: 0.2s;
+}
+
+.close-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 0 #333333;
+}
+

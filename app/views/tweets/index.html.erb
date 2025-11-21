@@ -1,10 +1,20 @@
-<h1>アトラクション口コミ</h1>
-<h3>一覧ページ</h3>
-<%= link_to "新規投稿へ", new_tweet_path %>
 
+  <% if user_signed_in? %>
+  <%= link_to "マイページへ", user_path(current_user.id), class: "link" %>
+  
 
-<% if user_signed_in? %>
-  <%= link_to "マイページへ", user_path(current_user.id) %>
+<h1>絶叫レベル診断</h1>
+<%= link_to "診断を始める", new_perfume_path, class: "link" %>
+
+<h1>アトラクション評価</h1>
+<%= link_to '評価を始める',lectures_index_path, class: "link" %>
+
+ <div class="coaster-supports"></div>
+
+  
+  <h1>アトラクション口コミ</h1>
+
+<%= link_to "新規投稿へ", new_tweet_path, class: "link" %>
 <% end %>
 
 <div class="tweets-container">
@@ -32,11 +42,6 @@
     
   <% end %>
 </div>
-<h1>絶叫レベル診断スタート</h1>
-<%= link_to "診断を始める", new_perfume_path, class: "link" %>
-
-<h1>アトラクション評価</h1>
-<%= link_to '評価を始める', lectures_index_path %>
 
 
  

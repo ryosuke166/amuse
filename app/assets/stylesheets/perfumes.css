@@ -1,10 +1,144 @@
 
-p {
- color: blue;  /*文字色を青に設定*/
+
+
+/* ====== 診断フォーム外枠 ====== */
+.perfume-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 120px auto 40px;
+    padding: 25px 30px;
+    background: rgba(255, 255, 255, 0.88);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    backdrop-filter: blur(3px);
 }
 
-footer{
-  height: 50px;
-  background-color: #000;
+/* ====== 質問項目 ====== */
+.perfume-container p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
+/* ====== ラジオボタン（カスタム） ====== */
+.perfume-container input[type="radio"] {
+    display: none;
+}
+
+.perfume-container label {
+    display: inline-block;
+    margin: 8px 10px 20px 0;
+    padding: 8px 16px;
+    background: #e8d2a4;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.2s;
+    border: 2px solid transparent;
+    font-size: 16px;
+}
+
+/* ====== クリック時の選択状態 ====== */
+.perfume-container input[type="radio"]:checked + label {
+    background: #d4b580;
+    border-color: #8c6a3e;
+    color: #fff;
+}
+
+/* ====== 結果ボタン ====== */
+.sindanbotan input[type="submit"] {
+    display: block;
+    margin: 40px auto 20px;
+    padding: 12px 40px;
+    font-size: 20px;
+    border: none;
+    background: #000000;
+    color: #f7f7f7;
+    font-weight: bold;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+/* 質問とラジオボタン全体を中央寄せ */
+.perfume-container {
+    text-align: center;
+}
+
+/* ラジオボタンのラベルをインラインブロック化して中央に */
+.perfume-container label {
+    display: inline-block;
+    margin: 10px;
+}
+
+/* ラジオボタン隠し＋中央に正しく反応させる */
+.perfume-container input[type="radio"] {
+    display: none;
+}
+
+
+.sindanbotan input[type="submit"]:hover {
+    background: #b28955;
+    transform: translateY(-2px);
+}
+
+/* ====== 閉じるリンク ====== */
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #5c4a2f;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ====== フッター（空でも位置固定したい場合） ====== */
+footer {
+    height: 80px;
+}
+
+/* ====== 結果画面 ====== */
+
+h1, p {
+    text-align: center;
+}
+
+
+.perfume-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;      /* ← 中央揃え */
+    padding: 30px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    text-align: center;     /* ← 中の文字・h6を中央に */
+}
+
+
+.perfume-container h6,
+.perfume-container h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #be0000;
+}
+
+/* ====== 閉じるボタン ====== */
+.close-button {
+    display: inline-block;
+    font-size: 15px;        /* 大きく */
+    font-weight: 400;       /* 太くして存在感アップ */
+    background: #000000;    /* 黒 */
+    color: #ffffff;         /* 白文字 */
+    padding: 7px 15px;     /* ボタンサイズ */
+    border-radius: 50px;    /* 丸み */
+    text-decoration: none;
+    box-shadow: 0 4px 0 #444444; /* 立体感の影 */
+    transition: 0.2s;
+}
+
+.close-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 0 #333333;
+}

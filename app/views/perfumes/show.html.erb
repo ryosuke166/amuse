@@ -1,6 +1,6 @@
 <div class="intoro">
   <h1>診断結果</h1>
-  <p>あなたの絶叫耐性レベルは...</p>
+  <h2>あなたの絶叫耐性レベルは...</h2>
 </div>
 <div class="perfume-container">
   <% case [@perfume.question1, @perfume.question2, @perfume.question3, @perfume.question4] %>
@@ -70,6 +70,7 @@
     <p>キャラクターとの平和な時間を過ごそう！</p>
   <% end %>
 
+  
 <%= link_to '閉じる', :controller => "tweets", :action => "index" %>
 
 </div>

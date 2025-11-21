@@ -1,6 +1,6 @@
-<%= link_to '授業新規登録をする', lectures_new_path%>
+<%= link_to '新規アトラクション評価を登録をする', lectures_new_path,class: "theme-button" %>
 
-<h1>授業一覧</h1>
+<h1>アトラクション評価一覧</h1>
 
 <% @lectures.each do |t|%>
 <div style = 'margin:20px; border:2px double black; width:500px;padding-left:20px;'>
@@ -36,4 +36,5 @@
 <% end %>
 
 
-<%= link_to '閉じる', :controller => "tweets", :action => "index" %>
+<%= link_to '閉じる', {controller: "tweets", action: "index"}, class: "close-button" %>
+
